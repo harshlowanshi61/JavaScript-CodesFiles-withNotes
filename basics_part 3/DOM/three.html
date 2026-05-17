@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style = "background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Python</li>
+    </ul>
+</body>
+<script>
+    function addlang (lang) {
+        const additem = document.createElement('li')
+        additem.innerHTML = `${lang}`
+        document.querySelector('.language').appendChild(additem)
+    }
+    addlang('javascript')
+    addlang('java')
+
+    //optimze way to add item in list
+    function addoptilang (lang) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(lang))
+        document.querySelector('.language').appendChild(li)
+    }
+    addoptilang('c++')
+
+    // edit elements
+   const secondlang = document.querySelector("li:nth-child(2)")
+    //newli.innerHTML= "mojo"
+    //second way
+    const newli = document.createElement('li')
+    newli.textContent="harshhh"
+    secondlang.replaceWith(newli)
+
+    //to remove an element 
+    const lastlang = document.querySelector('li:last-child')
+    lastlang.remove()
+</script>
+</html>
