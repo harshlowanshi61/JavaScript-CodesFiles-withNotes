@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HII HARSH LO1C</h1>
+    <button id="press"> Stop</button>
+</body>
+<script>
+    // Settimeout
+    //first way 
+    // setTimeout(function(){
+    //     console.log("harsh")
+    // },2000)
+
+    //second way 
+    const harsh = function(){
+        console.log("hi janvi")
+    }
+    setTimeout(harsh,2000)
+
+    //applying on document
+    const changetext = function(){
+        document.querySelector('h1').innerHTML = "HII JANVI MAM"
+    }
+    setInterval(changetext,2000)
+</script>
+</html>
