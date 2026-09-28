@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 </head>
-<body>
+<body style="background-color: black; color: white;">
     <h1>HII HARSH LO1C</h1>
     <button id="press"> Stop</button>
 </body>
@@ -17,15 +18,23 @@
     // },2000)
 
     //second way 
-    const harsh = function(){
-        console.log("hi janvi")
-    }
-    setTimeout(harsh,2000)
+    // const harsh = function(){
+    //     console.log("hi janvi")
+    // }
+    // setTimeout(harsh,2000)
 
     //applying on document
     const changetext = function(){
         document.querySelector('h1').innerHTML = "HII JANVI MAM"
+        
     }
-    setInterval(changetext,2000)
+    const one = setTimeout(changetext,3000)
+
+    //Cleartimeout 
+    //it is used to stop the settimeout function from executing the function after the given time.
+    document.querySelector('#press').addEventListener('click',function(){
+        clearTimeout(one);
+        console.log("stoped")
+    })
 </script>
 </html>
